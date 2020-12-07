@@ -2,8 +2,26 @@ import React from 'react';
 import Header from '../../components/Header'
 import icon from '../../assets/imagens/icon.png';
 import seta from '../../assets/imagens/seta.png';
+import api from '../../services/api';
 
-export const VerOcorrencia = () => (
+export class VerOcorrencia extends React.Component{
+  constructor(props) {
+    super(props);
+      // sla cara
+    this.state = {
+      ocorrencias: []
+    }
+    this.getOcorrencias = this.getOcorrencias.bind(this);
+  }
+  componentDidMount(){
+    this.getOcorrencias();
+  }
+  getOcorrencias = async function() {
+    const resp = await api.get('/ocorrencias');
+    console.log(resp);
+  }
+  render () {
+  return (
   <div>
     <Header />
     <div className="row h-100">
@@ -72,4 +90,6 @@ export const VerOcorrencia = () => (
     </div>
   </div>
 
-);
+)
+}
+};
