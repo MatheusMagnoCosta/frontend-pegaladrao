@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import Header from '../../components/Header';
+import FormRegOcorrencia from '../../components/FormRegOcorrencia';
 import { Link } from "react-router-dom";
 import icon from '../../assets/imagens/icon.png'
 import seta from '../../assets/imagens/seta.png';
@@ -39,27 +40,7 @@ export const RegistrarOcorrencia = () => (
         <div className="col-7 colunaD">
           <div className="card formularioOcorrencia">
             <div className="card-body">
-              <form action="./VerOcorrencia.html">
-                <select className="form-control mb-4 formcolor">
-                  <option>Ocorrência</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-                <select className="form-control mb-4 formcolor">
-                  <option>Estado</option>
-                  <option>Piauí</option>
-                </select>
-                <select className="form-control mb-4 formcolor">
-                  <option>Cidade</option>
-                  <option>Teresina</option>
-                </select>
-                <input type="text" className="form-control mb-4 formcolor" placeholder="Bairro" />
-                <input type="text" className="form-control mb-4 formcolor" placeholder="Rua" />
-                <button type="submit" className="btn btn-dark btn-block mt-4 btn-ocorrencia">Registrar ocorrência</button>
-              </form>
+              <FormRegOcorrencia />
             </div>
           </div>
         </div>
