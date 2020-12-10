@@ -1,16 +1,16 @@
 import React from 'react';
-import Header from '../../components/Footer';
-import Footer from '../../components/Header';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import FormLogin from '../../components/FormLogin';
 import {  Link } from "react-router-dom";
 
 export const Login = () => (
   <div>
-    <Header />
+    <Header/>
     <div class="card" id="formulario">
     <div class="card-body">
       <h1 class="card-title text-center">Login</h1>
-      <FormLogin />
+      <FormLogin/>
       <h5 class="text-center mt-4">Não tem uma conta?</h5>
       <p class="text-center">
         <strong>
@@ -19,8 +19,6 @@ export const Login = () => (
       </p>
     </div>
   </div>
-
-
-    <Footer />
+  <Footer/>
   </div>
 );
