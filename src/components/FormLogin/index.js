@@ -52,7 +52,7 @@ export default class index extends Component {
           <div className="card-body">
             <h1 className="card-title text-center">Login</h1>
             <div>
-              <form>
+              <form onSubmit={this.handleLogin}>
                 <div className="form-group mt-5">
                   <input type="text" className="form-control" placeholder="Email" name='email'
                     onChange={(e) => this.handleChange(e)} />
