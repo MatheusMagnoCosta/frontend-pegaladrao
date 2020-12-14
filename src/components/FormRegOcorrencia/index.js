@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+import icon from '../../assets/imagens/icon.png'
+import seta from '../../assets/imagens/seta.png';
+
 export default class index extends Component {
   render() {
     return (

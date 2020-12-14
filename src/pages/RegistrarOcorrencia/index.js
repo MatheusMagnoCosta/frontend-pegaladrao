@@ -7,8 +7,6 @@ import seta from '../../assets/imagens/seta.png';
 
 export const RegistrarOcorrencia = () => (
   <div>
-
-    <Header />
     <div className="container">
       <div className="row">
         <div className="col">
@@ -32,7 +30,7 @@ export const RegistrarOcorrencia = () => (
           </h6>
         </div>
 
-        <div class="col">
+        <div className="col">
           <FormRegOcorrencia />
         </div>
       </div>
