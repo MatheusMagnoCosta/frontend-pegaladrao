@@ -11,7 +11,7 @@ export default class index extends Component {
       nome: "",
       email: "",
       senha: "",
-      telefone: "1234",
+      telefone: "",
       error: ""
     };
     this.handleLogin = this.handleLogin.bind(this);
@@ -24,15 +24,9 @@ export default class index extends Component {
       this.setState({ error: "Preencha email e senha para continuar!" });
     } else {
       try {
-        const request = {
-          email: this.state.email,
-          senha: this.state.senha
-        }
-        console.log(request)
-        const response = await api.post("/login", request);
-        this.props.history.push("/app");
+        const response = await api.post("/login", { email, senha });
+        this.props.history.push("/");
         login(response.data.token);
-        console.log(response)
       } catch (err) {
         this.setState({
           error:
@@ -41,46 +35,26 @@ export default class index extends Component {
       }
     }
   };
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
-  };
   render() {
     return (
       <div className="container">
-        {this.state.error && <p>{this.state.error}</p>}
-<<<<<<< HEAD
-        <div className="card" id="formulario">
-          <div className="card-body">
-            <h1 className="card-title text-center">Login</h1>
-            <div>
-              <form onSubmit={this.handleLogin}>
-                <div className="form-group mt-5">
-                  <input type="text" className="form-control" placeholder="Email" name='email'
-                    onChange={(e) => this.handleChange(e)} />
-                </div>
-                <div className="form-group mt-3">
-                  <input type="password" className="form-control" placeholder="Senha" name='senha'
-                    onChange={(e) => this.handleChange(e)} />
-                </div>
-                <button type="submit" className="btn btn-dark btn-block mt-4">Entrar</button>
-              </form>
-=======
         <div className="row justify-content-center">
 
           <div className="card" id="formulario">
             <div className="card-body">
               <h1 className="card-title text-center">Login</h1>
               <div>
-                <form>
+                <form onSubmit={this.handleLogin}>
                   <div className="form-group mt-5">
                     <input type="text" className="form-control" placeholder="Email" name='email' required
-                      onChange={(e) => this.handleChange(e)} />
+                      onChange={(e) => this.setState({ email: e.target.value })} />
                   </div>
                   <div className="form-group mt-3">
                     <input type="password" className="form-control" placeholder="Senha" name='senha' required
-                      onChange={(e) => this.handleChange(e)} />
+                      onChange={(e) => this.setState({ senha: e.target.value })} />
                   </div>
                   <button type="submit" className="btn btn-dark btn-block mt-4">Entrar</button>
+                      {this.state.error && <p>{this.state.error}</p>}
                 </form>
               </div>
               <h5 className="text-center mt-4">Não tem uma conta?</h5>
@@ -89,7 +63,6 @@ export default class index extends Component {
                   <Link to="./signup">Cadastre-se</Link>
                 </strong>
               </p>
->>>>>>> 39c687ac595afb642fc6e529e7c3e04cfbca37e9
             </div>
           </div>
         </div>
