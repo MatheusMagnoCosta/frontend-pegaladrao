@@ -4,7 +4,7 @@ export default class index extends Component {
   render() {
     return (
       <div>
-        <form action="./mapa.html">
+        <form>
               <select className="form-control mb-4 formcolor">
                 <option>Estado</option>
                 <option>Piauí</option>

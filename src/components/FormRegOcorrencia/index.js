@@ -4,7 +4,7 @@ export default class index extends Component {
   render() {
     return (
       <div>
-        <form action="./VerOcorrencia.html">
+        <form>
           <select className="form-control mb-4 formcolor">
             <option>Ocorrência</option>
             <option>1</option>
