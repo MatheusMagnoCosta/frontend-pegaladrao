@@ -8,8 +8,8 @@ class Login extends Component {
   render() {
     return (
     <div>
-      <Header/>
-      <FormLogin/>
+    <Header/>
+    <FormLogin/>
     <Footer/>
     </div>);
 }

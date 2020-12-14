@@ -13,7 +13,7 @@ export const RegistrarOcorrencia = () => (
       <div className="row">
         <div className="col">
           <div className="">
-            <img src={icon} href="./" id="logo" width="100" height="100" alt=""/>
+            <img src={icon} href="./" id="logo" width="100" height="100" alt="" />
           </div>
         </div>
         <div className="">
@@ -25,7 +25,7 @@ export const RegistrarOcorrencia = () => (
         </div>
         <div className="">
           <a href="./">
-            <img src={seta} id="logo" width="80" height="80" alt=""/>
+            <img src={seta} id="logo" width="80" height="80" alt="" />
           </a>
           <h6 className="">
             Voltar para a página inicial

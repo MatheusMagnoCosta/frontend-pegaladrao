@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { login } from "../../services/auth";
 import api from "../../services/api";
-import {  Link, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 export default class index extends Component {
   constructor(props) {
