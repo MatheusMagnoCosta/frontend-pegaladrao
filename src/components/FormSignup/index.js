@@ -41,38 +41,41 @@ export default class index extends Component {
   };
   render() {
     return (
-      <div>
-        {this.state.error && <p>{this.state.error}</p>}
-        <div class="card" id="formulario">
-          <div class="card-body">
-            <h1 class="card-title text-center">Sign up</h1>
-            <div>
-              <form>
-                <div class="form-group mt-5">
-                  <input type="text" class="form-control" placeholder="Nome" name='nome'
-                    onChange={(e) => this.handleChange(e)}
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" placeholder="Telefone" name='telefone'
-                    onChange={(e) => this.handleChange(e)}
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" placeholder="Email" name='email'
-                    onChange={(e) => this.handleChange(e)}
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <input type="password" class="form-control" placeholder="Senha" name='senha'
-                    onChange={(e) => this.handleChange(e)}
-                  />
-                </div>
-                <button type="submit" class="btn btn-dark btn-block mt-4 mb-2">Cadastrar</button>
-                <small>Ao clicar em Cadastrar, você concorda com nossos Termos, Política de Dados e Política de Cookies.</small>
-              </form>
+      <div className="container">
+        <div className="row justify-content-center">
+
+          {this.state.error && <p>{this.state.error}</p>}
+          <div class="card" id="formulario">
+            <div class="card-body">
+              <h1 class="card-title text-center">Sign up</h1>
+              <div>
+                <form>
+                  <div class="form-group mt-5">
+                    <input type="text" class="form-control" placeholder="Nome" name='nome' required
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" placeholder="Telefone" name='telefone' required
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" placeholder="Email" name='email' required
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="password" class="form-control" placeholder="Senha" name='senha'
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-dark btn-block mt-4 mb-2">Cadastrar</button>
+                  <small>Ao clicar em Cadastrar, você concorda com nossos Termos, Política de Dados e Política de Cookies.</small>
+                </form>
+              </div>
+              <p />
             </div>
-            <p />
           </div>
         </div>
       </div>

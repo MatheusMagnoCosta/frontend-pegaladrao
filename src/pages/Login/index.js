@@ -10,7 +10,6 @@ class Login extends Component {
     <div>
     <Header/>
     <FormLogin/>
-    <Footer/>
     </div>);
 }
 }

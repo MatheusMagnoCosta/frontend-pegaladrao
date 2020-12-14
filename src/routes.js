@@ -27,9 +27,9 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       <Switch>
         <Route path="/" component ={Home} exact />
         <Route path="/login" component ={Login} />
-        <PrivateRoute path="/ver-ocorrencia" component = {VerOcorrencia} />
-        <PrivateRoute path="/registrar-ocorrencia" component={RegistrarOcorrencia} />
-        <PrivateRoute path="/mapa" component={Mapa} />
+        <Route path="/ver-ocorrencia" component = {VerOcorrencia} />
+        <Route path="/registrar-ocorrencia" component={RegistrarOcorrencia} />
+        <Route path="/mapa" component={Mapa} />
         <Route path="/signup"component={SignUp}/>
 
         <Route component={() => <div>ESSA PÁGINA É FRUTO DA SUA IMAGINAÇÃO</div> } />
