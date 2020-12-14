@@ -24,9 +24,15 @@ export default class index extends Component {
       this.setState({ error: "Preencha email e senha para continuar!" });
     } else {
       try {
-        const response = await api.post("/login", { email, senha });
-        login(response.data.token);
+        const request = {
+          email: this.state.email,
+          senha: this.state.senha
+        }
+        console.log(request)
+        const response = await api.post("/login", request);
         this.props.history.push("/app");
+        login(response.data.token);
+        console.log(response)
       } catch (err) {
         this.setState({
           error:
@@ -42,24 +48,24 @@ export default class index extends Component {
     return (
       <div>
         {this.state.error && <p>{this.state.error}</p>}
-        <div class="card" id="formulario">
-          <div class="card-body">
-            <h1 class="card-title text-center">Login</h1>
+        <div className="card" id="formulario">
+          <div className="card-body">
+            <h1 className="card-title text-center">Login</h1>
             <div>
-              <form action="./RegistrarOcorrencia.html" >
-                <div class="form-group mt-5">
-                  <input type="text" class="form-control" placeholder="Email" name='email'
+              <form>
+                <div className="form-group mt-5">
+                  <input type="text" className="form-control" placeholder="Email" name='email'
                     onChange={(e) => this.handleChange(e)} />
                 </div>
-                <div class="form-group mt-3">
-                  <input type="password" class="form-control" placeholder="Senha" name='senha'
+                <div className="form-group mt-3">
+                  <input type="password" className="form-control" placeholder="Senha" name='senha'
                     onChange={(e) => this.handleChange(e)} />
                 </div>
-                <button type="submit" class="btn btn-dark btn-block mt-4">Entrar</button>
+                <button type="submit" className="btn btn-dark btn-block mt-4">Entrar</button>
               </form>
             </div>
-            <h5 class="text-center mt-4">Não tem uma conta?</h5>
-            <p class="text-center">
+            <h5 className="text-center mt-4">Não tem uma conta?</h5>
+            <p className="text-center">
               <strong>
                 <Link to="./signup">Cadastre-se</Link>
               </strong>
