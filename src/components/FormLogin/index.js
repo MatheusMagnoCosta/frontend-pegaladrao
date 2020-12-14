@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { login } from "../../services/auth";
 import api from "../../services/api";
+import './style.css'
 import { Link } from "react-router-dom";
 
 export default class index extends Component {
