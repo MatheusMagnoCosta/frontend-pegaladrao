@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import FormLogin from '../../components/FormLogin';
-import {  Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class Login extends Component {
   render() {
